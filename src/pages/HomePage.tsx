@@ -1,10 +1,11 @@
-import { Box } from "@chakra-ui/react";
+import NavBar from "@/components/home_components/NavBar";
+
 
 function HomePage() {
   return (
-    <Box>
-      <h1>Home Page</h1>
-    </Box>
+    <>
+      <NavBar />
+    </>
   );
 }
 
