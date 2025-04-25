@@ -3,24 +3,33 @@ import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import GalleryPage from "./pages/GalleryPage";
 import BlogPage from "./pages/BlogPage";
+import Layout from "./pages/Layout";
+import PaperPage from "./pages/PaperPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <Layout />,
     errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "gallery",
+        element: <GalleryPage />,
+      },
+      {
+        path: "papers",
+        element: <PaperPage />,
+      },
+      {
+        path: "blog",
+        element: <BlogPage />,
+      },
+    ],
   },
-
-  {
-    path: "/gallery",
-    element: <GalleryPage />,
-  },
-  {
-    path: "/blog",
-    element: <BlogPage />,
-  },
-
-  //
   {
     path: "/index",
     element: <Navigate to="/" replace />,
@@ -30,4 +39,5 @@ const router = createBrowserRouter([
     element: <NotFound />,
   },
 ]);
+
 export default router;

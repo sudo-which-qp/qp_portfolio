@@ -12,7 +12,7 @@ function NavBar() {
       padding={4}
       top="0"
       zIndex="10"
-      bg={"whiteAlpha.900"}
+      bg={"whiteAlpha.100"}
     >
       {/* Border Body */}
       <Box
@@ -20,6 +20,7 @@ function NavBar() {
         borderWidth="1px"
         borderRadius="30px"
         borderColor="gray.300"
+        bg={"whiteAlpha.900"}
         width="50%"
       >
         {/* Row for Header */}
@@ -31,11 +32,13 @@ function NavBar() {
         >
           {/* Row for Avatar */}
           <Flex direction="row" align="center" gap="2">
-            <Avatar.Root>
-              <Avatar.Fallback name="Godsend Joseph" />
-              <Avatar.Image src={qpImage} />
-            </Avatar.Root>
-            <Text fontWeight="semibold">godsend.</Text>
+            <Link href="/" _hover={{ textDecoration: "none" }}>
+              <Avatar.Root>
+                <Avatar.Fallback name="Godsend Joseph" />
+                <Avatar.Image src={qpImage} />
+              </Avatar.Root>
+              <Text fontWeight="semibold">godsend.</Text>
+            </Link>
           </Flex>
 
           {/* Row for Nav */}
@@ -49,16 +52,7 @@ function NavBar() {
               </Flex>
             </Link>
 
-            <Link href="/gallery">
-              <Flex direction="row" align="center" gap="0.2">
-                <Text>Gallery</Text>
-                <Icon>
-                  <LuArrowUpRight />
-                </Icon>
-              </Flex>
-            </Link>
-
-            <Link href="/gallery">
+            <Link href="/papers">
               <Flex direction="row" align="center" gap="0.2">
                 <Text>Papers</Text>
                 <Icon>
