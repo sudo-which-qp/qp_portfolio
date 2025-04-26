@@ -50,13 +50,13 @@ function Footer() {
           <Flex direction={"row"} justifyContent={"space-evenly"} gap={2}>
             <Link href="https://github.com/sudo-which-qp" target="_blank">
               <Box bg={"gray.100"} borderRadius="5px" p={2}>
-                <Icon as={LuGithub} color={"black"} boxSize={5} />
+                <Icon as={LuGithub} boxSize={5} />
               </Box>
             </Link>
 
             <Link href="https://x.com/godsend_joseph" target="_blank">
               <Box bg={"gray.100"} borderRadius="5px" p={2}>
-                <Icon as={LuX} color={"black"} boxSize={5} />
+                <Icon as={LuX} boxSize={5} />
               </Box>
             </Link>
 
@@ -65,7 +65,7 @@ function Footer() {
               target="_blank"
             >
               <Box bg={"gray.100"} borderRadius="5px" p={2}>
-                <Icon as={LuLinkedin} color={"black"} boxSize={5} />
+                <Icon as={LuLinkedin} boxSize={5} />
               </Box>
             </Link>
 
@@ -74,7 +74,7 @@ function Footer() {
               target="_blank"
             >
               <Box bg={"gray.100"} borderRadius="5px" p={2}>
-                <Icon as={LuInstagram} color={"black"} boxSize={5} />
+                <Icon as={LuInstagram} boxSize={5} />
               </Box>
             </Link>
 
@@ -83,7 +83,7 @@ function Footer() {
               target="_blank"
             >
               <Box bg={"gray.100"} borderRadius="5px" p={2}>
-                <Icon as={LuFacebook} color={"black"} boxSize={5} />
+                <Icon as={LuFacebook} boxSize={5} />
               </Box>
             </Link>
           </Flex>
