@@ -1,0 +1,29 @@
+[
+  {
+    "title": "VNotes",
+    "slug": "vnotes",
+    "description": "A simplified note taking application. It focuses on ease and simplicity.",
+    "tech_stack": ["Flutter", "Flutter BLoC", "Flutter Hive", "Laravel", "MySQL"],
+    "role": "Developed the application from scratch as the sole developer responsible for all aspects of the project.",
+    "features": [
+      "Local storage using Flutter Hive",
+      "User authentication and authorization",
+      "Note creation, editing, and deletion",
+      "Dark and light modes",
+      "Responsive design",
+      "Data persistence using Flutter Hive"
+    ],
+    "challenges_and_learnings": "Maintaining a clean codebase and ensuring the application's performance. Move from using Provider for state management to using Bloc for state management, focused on separation of concerns and clean architecture.",
+    "links": {
+      "github": "https://github.com/sudo-which-qp/hive_note_app",
+      "live_demo": "https://play.google.com/store/apps/details?id=com.viewus.v_notes",
+      "video_demo": ""
+    },
+    "thumbnail": "/images/projects/task-manager-thumb.png",
+    "screenshots": [
+      "",
+      ""
+    ],
+    "tags": ["Mobile", "Productivity", "Personal Project"]
+  }
+]

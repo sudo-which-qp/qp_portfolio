@@ -10,7 +10,7 @@ function AboutContent() {
         alignItems="center"
       >
         <Box width="90%" paddingTop={10} alignItems="center">
-          <Text textStyle="4xl" textAlign="justify">
+          <Text fontFamily="roboto" textStyle="4xl" textAlign="justify">
             Hi there, so who is Godsend Joseph? Well I am an experience software
             engineer with a passion for learning and sharing knowledge. I have
             worked on a wide range of projects, from web applications to mobile

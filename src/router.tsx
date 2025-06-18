@@ -1,7 +1,6 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
-import GalleryPage from "./pages/GalleryPage";
 import BlogPage from "./pages/BlogPage";
 import Layout from "./pages/Layout";
 import PaperPage from "./pages/PaperPage";
@@ -18,10 +17,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
-      },
-      {
-        path: "gallery",
-        element: <GalleryPage />,
       },
       {
         path: "projects",
