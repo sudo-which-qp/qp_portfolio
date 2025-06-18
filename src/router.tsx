@@ -5,7 +5,9 @@ import GalleryPage from "./pages/GalleryPage";
 import BlogPage from "./pages/BlogPage";
 import Layout from "./pages/Layout";
 import PaperPage from "./pages/PaperPage";
+import WorkInProgress from "@/components/custom/WorkInProgress.tsx";
 
+const isOnMaintenance = true;
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,11 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: "papers",
-        element: <PaperPage />,
+        element: isOnMaintenance ? <WorkInProgress /> : <PaperPage /> ,
       },
       {
         path: "blog",
-        element: <BlogPage />,
+        element: isOnMaintenance ? <WorkInProgress /> : <BlogPage />,
       },
     ],
   },

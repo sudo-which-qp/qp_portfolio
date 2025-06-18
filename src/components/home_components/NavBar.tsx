@@ -43,7 +43,7 @@ function NavBar() {
 
           {/* Row for Nav */}
           <Flex direction="row" align="center" gap="3" paddingRight="3">
-            <Link href="#" download={false}>
+            <Link href="/files/Godsend_J_CV.pdf" download={true} target="_blank">
               <Flex direction="row" align="center" gap="0.2">
                 <Text>Resume</Text>
                 <Icon>
