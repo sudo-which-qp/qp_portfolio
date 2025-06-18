@@ -9,7 +9,7 @@ function AboutContent() {
         justifyContent="center"
         alignItems="center"
       >
-        <Box width="70%" paddingTop={10} alignItems="center">
+        <Box width="90%" paddingTop={10} alignItems="center">
           <Text textStyle="4xl" textAlign="justify">
             Hi there, so who is Godsend Joseph? Well I am an experience software
             engineer with a passion for learning and sharing knowledge. I have

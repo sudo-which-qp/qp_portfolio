@@ -6,6 +6,7 @@ import BlogPage from "./pages/BlogPage";
 import Layout from "./pages/Layout";
 import PaperPage from "./pages/PaperPage";
 import WorkInProgress from "@/components/custom/WorkInProgress.tsx";
+import ProjectPage from "@/pages/ProjectPage.tsx";
 
 const isOnMaintenance = true;
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "gallery",
         element: <GalleryPage />,
+      },
+      {
+        path: "projects",
+        element: <ProjectPage />,
       },
       {
         path: "papers",
