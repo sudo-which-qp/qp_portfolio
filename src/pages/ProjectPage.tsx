@@ -1,4 +1,4 @@
-import {Flex, Text, Image, Box, Badge, List, Button, Icon} from "@chakra-ui/react";
+import {Flex, Text, Image, Box, Badge, List, Button, Icon, Link} from "@chakra-ui/react";
 import {useState, useEffect} from "react";
 import {LuCircleCheck} from "react-icons/lu"
 
@@ -87,8 +87,11 @@ function ProjectPage() {
                                             ))}
                                         </List.Root>
 
-                                        <Button width={{  base: "100%", md: "30%"}} mt={2} as="a" href={project.links.live_demo} target="_blank"
-                                        >Live View</Button>
+                                        <Link href={project.links.live_demo} target="_blank">
+                                            <Button width={{ base: "100%", md: "30%" }} mt={2}>
+                                                Live View
+                                            </Button>
+                                        </Link>
                                     </Flex>
                                 </Box>
                             </Flex>
