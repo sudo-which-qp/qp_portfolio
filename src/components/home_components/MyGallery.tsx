@@ -55,7 +55,7 @@ function MyGallery() {
                                 fit="cover"
                                 rounded="lg"
                                 w="100%"
-                                h="auto"
+                                h="400px"
                             />
                         ))}
                     </Grid>
