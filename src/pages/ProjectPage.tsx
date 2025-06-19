@@ -1,4 +1,4 @@
-import {Flex, Text, Image, Box, Badge, Link, List, Button} from "@chakra-ui/react";
+import {Flex, Text, Image, Box, Badge, List, Button, Icon} from "@chakra-ui/react";
 import {useState, useEffect} from "react";
 import {LuCircleCheck} from "react-icons/lu"
 
@@ -44,14 +44,14 @@ function ProjectPage() {
                 <Text>
                     Personal Projects
                 </Text>
-                <Text fontSize="sm" fontStyle="italic">
+                <Text px={{  base: 20, md: 0}} textAlign="center" fontSize="sm" fontStyle="italic">
                     This is still an experimental website and not all my projects are listed here.
                 </Text>
 
                 <Box width="100%" paddingRight={16} paddingLeft={16} alignItems="center">
                     {projectDetails.map((project) => (
                         <Box padding={10}>
-                            <Flex direction="row" alignItems="top">
+                            <Flex direction={{ base: "column", md: "row" }} alignItems="top">
                                 <Image
                                     objectFit="cover"
                                     maxW="200px"
@@ -59,13 +59,13 @@ function ProjectPage() {
                                     alt={project.title}
                                 />
 
-                                <Box ml={5}>
+                                <Box ml={{ base: 0, md: 5 }}>
                                     <Flex direction="column">
                                         <Text fontSize="2xl" fontWeight="bold">
                                             {project.title}
                                         </Text>
 
-                                        <Flex direction="row">
+                                        <Flex wrap={{ base: "wrap", md: "nowrap" }} gap={2} direction="row">
                                             {project.tech_stack.map((techS) => (
                                                 <Badge mr={2} padding={2}>{techS}</Badge>
                                             ))}
@@ -77,14 +77,17 @@ function ProjectPage() {
                                         <List.Root gap="2" variant="plain" align="center">
                                             {project.features.map((feature) => (
                                                 <List.Item>
-                                                    <LuCircleCheck size={20}/>
+                                                    <Icon
+                                                        as={LuCircleCheck}
+                                                        boxSize={[4, 4]}  // ✅ TypeScript friendly
+                                                    />
                                                     <Box mr={2}></Box>
-                                                    {feature}
+                                                    <Text fontSize={{ base: "sm", md: "md" }}>{feature}</Text>
                                                 </List.Item>
                                             ))}
                                         </List.Root>
 
-                                        <Button width="30%" mt={2} as="a" href={project.links.live_demo} target="_blank"
+                                        <Button width={{  base: "100%", md: "30%"}} mt={2} as="a" href={project.links.live_demo} target="_blank"
                                         >Live View</Button>
                                     </Flex>
                                 </Box>
