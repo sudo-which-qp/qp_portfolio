@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Box, Flex, Grid, Image, Link, Text} from "@chakra-ui/react";
+import {Box, Flex, Grid, Image, Link, Text, useBreakpointValue} from "@chakra-ui/react";
 
 interface GalleryImage {
     id: number;
@@ -34,6 +34,9 @@ function MyGallery() {
             return shuffled.slice(0, Math.min(count, shuffled.length));
         };
 
+    const maxImages = useBreakpointValue({ base: 2, md: images.length }) || images.length;
+    const displayedImages = images.slice(0, maxImages);
+
     return (
         <>
             <Flex
@@ -43,16 +46,16 @@ function MyGallery() {
                 alignItems="center"
             >
                 <Box width="70%" paddingTop={10} alignItems="center">
-                    <Grid templateColumns="repeat(3, 1fr)" gap={3}>
-                        {images.map((image) => (
+                    <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={3}>
+                        {displayedImages.map((image) => (
                             <Image
                                 key={image.id}
                                 src={`/images/gallery/${image.image}`}
                                 alt={image.image}
                                 fit="cover"
                                 rounded="lg"
-                                w="600px"
-                                h="400px"
+                                w="100%"
+                                h="auto"
                             />
                         ))}
                     </Grid>

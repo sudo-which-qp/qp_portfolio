@@ -10,7 +10,7 @@ function AboutContent() {
         alignItems="center"
       >
         <Box width="90%" paddingTop={{ base: 1, md: 8 }} alignItems="center">
-          <Text fontFamily="roboto" textStyle={{ base: "md", md: "lg", lg: "4xl" }} textAlign="center">
+          <Text px={4} fontFamily="roboto" textStyle={{ base: "xl", md: "2xl", lg: "4xl" }} textAlign="center">
             Hi there, so who is Godsend Joseph? Well I am an experience software
             engineer with a passion for learning and sharing knowledge. I have
             worked on a wide range of projects, from web applications to mobile
