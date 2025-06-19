@@ -1,9 +1,9 @@
-import {Avatar, Box, Flex, Icon, IconButton, Link, Text, VStack, useDisclosure} from "@chakra-ui/react";
+import {Avatar, Box, Flex, Icon, IconButton, Link, Text} from "@chakra-ui/react";
 import {LuArrowUpRight, LuMenu} from "react-icons/lu";
 import qpImage from "../../assets/qp.jpg";
 
 function NavBar() {
-    const {isOpen, onToggle} = useDisclosure();
+    // const {_, onToggle} = useDisclosure();
     return (
         <Box
             width="100%"
@@ -48,18 +48,10 @@ function NavBar() {
                         _hover={{bg: "transparent"}}
                         _active={{bg: "transparent"}}
                         display={{base: "flex", md: "none"}}
-                        onClick={onToggle}
+                        // onClick={onToggle}
                     >
                         <LuMenu size={24} color="gray.500"/>
                     </IconButton>
-
-                    {isOpen && (
-                        <VStack display={{base: "flex", md: "none"}} mt={4}>
-                            <Box>Home</Box>
-                            <Box>Projects</Box>
-                            <Box>Contact</Box>
-                        </VStack>
-                    )}
 
                     {/* Row for Nav */}
                     <Flex display={{base: "none", md: "flex"}} direction="row" align="center" gap="3" paddingRight="3">
