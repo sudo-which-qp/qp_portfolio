@@ -9,8 +9,8 @@ function AboutContent() {
         justifyContent="center"
         alignItems="center"
       >
-        <Box width="90%" paddingTop={10} alignItems="center">
-          <Text fontFamily="roboto" textStyle="4xl" textAlign="justify">
+        <Box width="90%" paddingTop={{ base: 1, md: 8 }} alignItems="center">
+          <Text fontFamily="roboto" textStyle={{ base: "md", md: "lg", lg: "4xl" }} textAlign="center">
             Hi there, so who is Godsend Joseph? Well I am an experience software
             engineer with a passion for learning and sharing knowledge. I have
             worked on a wide range of projects, from web applications to mobile

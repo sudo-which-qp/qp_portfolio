@@ -43,7 +43,7 @@ function NavBar() {
 
                     {/* Row for Nav */}
                     <Flex direction="row" align="center" gap="3" paddingRight="3">
-                        <Link href="/files/Godsend_J_CV.pdf" download={true} target="_blank">
+                        <Link _focus={{outline: 'none', boxShadow: 'none'}} href="/files/Godsend_J_CV.pdf" download={true} target="_blank">
                             <Flex direction="row" align="center" gap="0.2">
                                 <Text>Resume</Text>
                                 <Icon>
@@ -52,7 +52,7 @@ function NavBar() {
                             </Flex>
                         </Link>
 
-                        <Link href="/projects">
+                        <Link _focus={{outline: 'none', boxShadow: 'none'}} href="/projects">
                             <Flex direction="row" align="center" gap="0.2">
                                 <Text>Projects</Text>
                                 <Icon>
@@ -61,7 +61,7 @@ function NavBar() {
                             </Flex>
                         </Link>
 
-                        <Link href="/papers">
+                        <Link _focus={{outline: 'none', boxShadow: 'none'}} href="/papers">
                             <Flex direction="row" align="center" gap="0.2">
                                 <Text>Papers</Text>
                                 <Icon>

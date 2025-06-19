@@ -1,5 +1,4 @@
 import AboutContent from "@/components/home_components/AboutContent";
-import Footer from "@/components/home_components/Footer";
 import MyGallery from "@/components/home_components/MyGallery";
 
 function HomePage() {
@@ -8,8 +7,6 @@ function HomePage() {
       <AboutContent />
 
       <MyGallery />
-
-      <Footer />
     </>
   );
 }

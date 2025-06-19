@@ -10,30 +10,7 @@ import {
 function Footer() {
     return (
         <>
-            <Flex
-                width="100%"
-                direction="column"
-                justifyContent="center"
-                alignItems="center"
-                mb={10}
-            >
-                <Box width="70%" paddingTop={10} alignItems="center">
-                    <Text textStyle="4xl" textAlign="left">
-                        Recently have been working a side project on my free time
-                    </Text>
 
-                    <Link>
-                        <Text
-                            mt={5}
-                            textStyle="4xl"
-                            textAlign="left"
-                            textDecoration="underline"
-                        >
-                            View my projects
-                        </Text>
-                    </Link>
-                </Box>
-            </Flex>
 
             <Flex width="100%" direction="column" justifyContent="center"
                   alignItems="center"
@@ -60,7 +37,7 @@ function Footer() {
             >
 
                 <Flex direction="row" align="center">
-                    <Text textStyle="lg" textAlign="center" mr={5}>
+                    <Text fontWeight="bold" textStyle="lg" textAlign="center" mr={5}>
                         Follow me:
                     </Text>
 

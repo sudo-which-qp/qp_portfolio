@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Box, Flex, Grid, Image} from "@chakra-ui/react";
+import {Box, Flex, Grid, Image, Link, Text} from "@chakra-ui/react";
 
 interface GalleryImage {
     id: number;
@@ -56,6 +56,32 @@ function MyGallery() {
                             />
                         ))}
                     </Grid>
+                </Box>
+            </Flex>
+
+            <Flex
+                width="100%"
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                mb={10}
+            >
+                <Box width="70%" paddingTop={10} alignItems="center">
+                    <Text textStyle="2xl" textAlign="left">
+                        Recently have been working a side project on my free time, can't show what it is yet, but it
+                        will be something cool.
+                    </Text>
+
+                    <Link href="/projects">
+                        <Text
+                            mt={5}
+                            textStyle="4xl"
+                            textAlign="left"
+                            textDecoration="underline"
+                        >
+                            View my projects
+                        </Text>
+                    </Link>
                 </Box>
             </Flex>
         </>
