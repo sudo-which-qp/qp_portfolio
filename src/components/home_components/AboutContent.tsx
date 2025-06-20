@@ -1,29 +1,26 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import {Box, Flex, Text} from "@chakra-ui/react";
 
 function AboutContent() {
-  return (
-    <>
-      <Flex
-        width="100%"
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Box width="90%" paddingTop={{ base: 1, md: 8 }} alignItems="center">
-          <Text px={4} fontFamily="roboto" textStyle={{ base: "xl", md: "2xl", lg: "4xl" }} textAlign="center">
-            Hi there, so who is Godsend Joseph? Well I am an experience software
-            engineer with a passion for learning and sharing knowledge. I have
-            worked on a wide range of projects, from web applications to mobile
-            apps. I am always looking for new challenges and opportunities to
-            learn and grow. I am currently on my Masters Degree in Advanced
-            Computer Science at the Cardiff Metropolitan University, Wales UK.
-            In my free time, I enjoy learning new things, reading, playing video
-            games and taking photos.
-          </Text>
-        </Box>
-      </Flex>
-    </>
-  );
+    return (
+        <>
+            <Flex
+                width="100%"
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Box width="90%" paddingTop={{base: 1, md: 8}} alignItems="center">
+                    <Text px={4} fontFamily="roboto" textStyle={{base: "xl", md: "2xl", lg: "4xl"}} textAlign="center">
+                        Hi, I'm Godsend Joseph, a passionate and curious software engineer with hands-on experience in
+                        building web and mobile applications. I'm always exploring new technologies, solving real-world
+                        problems, and sharing what I learn. Currently pursuing my Master’s in Advanced Computer Science
+                        at Cardiff Metropolitan University, UK. Outside of tech, I enjoy reading, gaming, photography,
+                        and discovering new ways to grow.
+                    </Text>
+                </Box>
+            </Flex>
+        </>
+    );
 }
 
 export default AboutContent;
