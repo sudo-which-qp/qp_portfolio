@@ -48,30 +48,32 @@ function ProjectPage() {
                     This is still an experimental website and not all my projects are listed here.
                 </Text>
 
-                <Box width="100%" paddingRight={16} paddingLeft={16} alignItems="center">
+                <Box width="100%" paddingRight={{ base: 0, md: 16 }} paddingLeft={{ base: 0, md: 16 }} alignItems="center">
                     {projectDetails.map((project) => (
                         <Box padding={10}>
                             <Flex direction={{ base: "column", md: "row" }} alignItems="top">
-                                <Image
-                                    objectFit="cover"
-                                    maxW="200px"
-                                    src={project.thumbnail}
-                                    alt={project.title}
-                                />
+                                <Flex justifyContent={{ base: "center", md: "flex-start"}}>
+                                    <Image
+                                        objectFit="cover"
+                                        maxW="200px"
+                                        src={project.thumbnail}
+                                        alt={project.title}
+                                    />
+                                </Flex>
 
                                 <Box ml={{ base: 0, md: 5 }}>
                                     <Flex direction="column">
-                                        <Text fontSize="2xl" fontWeight="bold">
+                                        <Text mt={{ base: 3, md: 0 }} fontSize="2xl" fontWeight="bold">
                                             {project.title}
                                         </Text>
 
-                                        <Flex wrap={{ base: "wrap", md: "nowrap" }} gap={2} direction="row">
+                                        <Flex mt={{ base: 3, md: 0 }} wrap={{ base: "wrap", md: "nowrap" }} gap={2} direction="row">
                                             {project.tech_stack.map((techS) => (
                                                 <Badge mr={2} padding={2}>{techS}</Badge>
                                             ))}
                                         </Flex>
 
-                                        <Text mt={2}>{project.description}</Text>
+                                        <Text mt={{ base: 5, md: 4 }}>{project.description}</Text>
 
                                         <Text mt={2} fontWeight="bold">Features:</Text>
                                         <List.Root gap="2" variant="plain" align="center">

@@ -33,7 +33,7 @@ function Footer() {
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
-                mb={10}
+                mb={5}
             >
 
                 <Flex direction="row" align="center">
@@ -83,6 +83,9 @@ function Footer() {
                     </Flex>
                 </Flex>
             </Flex>
+            <Text mb={10} fontSize="sm" textAlign="center">
+                &copy; {new Date().getFullYear()} Godsend Joseph. All rights reserved.
+            </Text>
         </>
     );
 }
