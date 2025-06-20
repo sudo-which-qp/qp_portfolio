@@ -28,7 +28,7 @@ interface ProjectDetails {
 function ProjectPage() {
     const [projectDetails, setProjectDetails] = useState<ProjectDetails[]>([])
     useEffect(() => {
-        fetch("/projects.json")
+        fetch(`/projects.json?ts=${Date.now()}`)
             .then((response) => response.json())
             .then((data) => {
                 console.log("Fetched data:", data);
