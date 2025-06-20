@@ -73,7 +73,7 @@ function ProjectPage() {
                                             </Box>
                                         </Flex>
 
-                                        <Flex mt={{ base: 3, md: 0 }} wrap={{ base: "wrap", md: "nowrap" }} gap={2} direction="row">
+                                        <Flex mt={{ base: 1, md: 0 }} wrap={{ base: "wrap", md: "nowrap" }} gap={2} direction="row">
                                             {project.tech_stack.map((techS) => (
                                                 <Badge mr={2} padding={2}>{techS}</Badge>
                                             ))}
