@@ -3,6 +3,7 @@
     "id": 1,
     "title": "VNotes",
     "slug": "vnotes",
+    "type": "Personal Project",
     "description": "VNotes is a simple note application, with simple UI (user interface), the UI is very flexible and easy to navigate through screens. VNotes lets you create a note, read any note, edit any note and also delete any note you want to.",
     "tech_stack": ["Flutter", "Flutter BLoC", "Flutter Hive", "Laravel", "MySQL"],
     "role": "Developed the application from scratch as the sole developer responsible for all aspects of the project.",

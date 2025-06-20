@@ -12,6 +12,7 @@ interface ProjectDetails {
     id: number;
     title: string;
     slug: string;
+    type: string;
     description: string;
     tech_stack: string[];
     role: string;
@@ -63,9 +64,14 @@ function ProjectPage() {
 
                                 <Box ml={{ base: 0, md: 5 }}>
                                     <Flex direction="column">
-                                        <Text mt={{ base: 3, md: 0 }} fontSize="2xl" fontWeight="bold">
-                                            {project.title}
-                                        </Text>
+                                        <Flex alignItems={{ base: "bottom", md: "center"}}>
+                                            <Text mt={{ base: 3, md: 0 }} fontSize="2xl" fontWeight="bold">
+                                                {project.title}
+                                            </Text>
+                                            <Box padding={5}>
+                                                <Badge ml={2} fontSize={"xs"}>{project.type}</Badge>
+                                            </Box>
+                                        </Flex>
 
                                         <Flex mt={{ base: 3, md: 0 }} wrap={{ base: "wrap", md: "nowrap" }} gap={2} direction="row">
                                             {project.tech_stack.map((techS) => (
