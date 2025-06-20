@@ -1,29 +1,7 @@
-import {Flex, Text, Image, Box, Badge, List, Button, Icon, Link} from "@chakra-ui/react";
+import {Flex, Text, Box} from "@chakra-ui/react";
 import {useState, useEffect} from "react";
-import {LuCircleCheck} from "react-icons/lu"
-
-interface ProjectLink {
-    github: string;
-    live_demo: string;
-    video_demo?: string;
-}
-
-interface ProjectDetails {
-    id: number;
-    title: string;
-    slug: string;
-    type: string;
-    description: string;
-    tech_stack: string[];
-    role: string;
-    features: string[];
-    challenges_and_learnings: string;
-    links: ProjectLink;
-    thumbnail: string;
-    screenshots: string[];
-    tags: string[];
-}
-
+import {ProjectDetails} from "@/data/models.ts";
+import ProjectTile from "@/components/custom/ProjectTile.tsx";
 
 function ProjectPage() {
     const [projectDetails, setProjectDetails] = useState<ProjectDetails[]>([])
@@ -52,59 +30,10 @@ function ProjectPage() {
 
                 <Box width="100%" paddingRight={{ base: 0, md: 16 }} paddingLeft={{ base: 0, md: 16 }} alignItems="center">
                     {projectDetails.map((project) => (
-                        <Box padding={10}>
-                            <Flex direction={{ base: "column", md: "row" }} alignItems="top">
-                                <Flex justifyContent={{ base: "center", md: "flex-start"}}>
-                                    <Image
-                                        objectFit="cover"
-                                        maxW="200px"
-                                        src={project.thumbnail}
-                                        alt={project.title}
-                                    />
-                                </Flex>
-
-                                <Box ml={{ base: 0, md: 5 }}>
-                                    <Flex direction="column">
-                                        <Flex alignItems={{ base: "bottom", md: "center"}}>
-                                            <Text mt={{ base: 3, md: 0 }} fontSize="2xl" fontWeight="bold">
-                                                {project.title}
-                                            </Text>
-                                            <Box padding={5}>
-                                                <Badge ml={2} fontSize={"xs"}>{project.type}</Badge>
-                                            </Box>
-                                        </Flex>
-
-                                        <Flex mt={{ base: 1, md: 0 }} wrap={{ base: "wrap", md: "nowrap" }} gap={2} direction="row">
-                                            {project.tech_stack.map((techS) => (
-                                                <Badge mr={2} padding={2}>{techS}</Badge>
-                                            ))}
-                                        </Flex>
-
-                                        <Text mt={{ base: 5, md: 4 }}>{project.description}</Text>
-
-                                        <Text mt={2} fontWeight="bold">Features:</Text>
-                                        <List.Root gap="2" variant="plain" align="center">
-                                            {project.features.map((feature) => (
-                                                <List.Item>
-                                                    <Icon
-                                                        as={LuCircleCheck}
-                                                        boxSize={[4, 4]}  // ✅ TypeScript friendly
-                                                    />
-                                                    <Box mr={2}></Box>
-                                                    <Text fontSize={{ base: "sm", md: "md" }}>{feature}</Text>
-                                                </List.Item>
-                                            ))}
-                                        </List.Root>
-
-                                        <Link href={project.links.live_demo} target="_blank">
-                                            <Button width={{ base: "100%", md: "30%" }} mt={2}>
-                                                Live View
-                                            </Button>
-                                        </Link>
-                                    </Flex>
-                                </Box>
-                            </Flex>
-                        </Box>
+                        <ProjectTile
+                            key={project.id}
+                            {...project}
+                        />
                     ))}
                 </Box>
             </Flex>
