@@ -9,7 +9,7 @@ function WorkInProgress() {
                 alignItems="center"
             >
                 <Box p={8}>
-                    <Image height="500px" src="/dev/maintenance_1.gif" alt="Work in progress" />
+                    <Image height={{ base: "200px", md: "400px"}} src="/dev/maintenance_1.gif" alt="Work in progress" />
                     <Text fontSize="xl" textAlign="center">
                         Currently under maintenance. Please check back later.
                     </Text>
