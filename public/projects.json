@@ -27,5 +27,65 @@
       ""
     ],
     "tags": ["Mobile", "Productivity", "Personal Project"]
+  },
+  {
+    "id": 2,
+    "title": "CoinPlug",
+    "slug": "coinplug",
+    "type": "Client Project",
+    "description": "CoinPlug is a secure and reliable platform for crypto to naira converter. It offers the fastest and most reliable transactions you can think of, assuring our users of high-level protection. The platform is user-friendly for all, so you can rest assured of easy navigation through the platform without experiencing any difficulty.",
+    "tech_stack": ["Flutter", "Riverpod", "Shared Preferences", "Laravel", "MySQL"],
+    "role": "Was brought in as a Flutter developer to finish the project as the previous developer left the project.",
+    "features": [
+      "User authentication and authorization",
+      "Responsive design",
+      "Data persistence using Shared Preferences",
+      "Third-party payment integration",
+      "Crypto to Naira conversion",
+      "Secure transaction system",
+      "Live updates on transaction status"
+    ],
+    "challenges_and_learnings": "Working with Flutter Riverpod as I am not used to it, I work mainly with Bloc (Cubit).",
+    "links": {
+      "github": "",
+      "live_demo": "https://play.google.com/store/apps/details?id=app.coinplug&hl=en_GB",
+      "video_demo": ""
+    },
+    "thumbnail": "/images/screenshots/coin_plug.webp",
+    "screenshots": [
+      "",
+      ""
+    ],
+    "tags": ["Mobile", "Productivity", "Personal Project"]
+  },
+  {
+    "id": 3,
+    "title": "BingPay",
+    "slug": "bingpay",
+    "type": "Client Project",
+    "description": "Bingpay is a Nigerian financial technology company that enables Africans to make payments for goods and services all over the world. It is a utility base application which helps customers to pay for utility services, such as Airtime, Data, TV, and Power, etc.",
+    "tech_stack": ["Flutter", "Bloc (Cubit)", "Flutter Hive", "PHP", "MySQL"],
+    "role": "Worked on the project from the start of it as a Flutter developer. I was also brought in as a Flutter developer to finish the project.",
+    "features": [
+      "User authentication and authorization",
+      "Responsive design",
+      "Data persistence using Flutter Hive",
+      "Third-party payment integration",
+      "Utility payments",
+      "Gift cards payments",
+      "Secure transaction system"
+    ],
+    "challenges_and_learnings": "",
+    "links": {
+      "github": "",
+      "live_demo": "https://play.google.com/store/apps/details?id=com.bingpay.bing_pay&hl=en_GB",
+      "video_demo": ""
+    },
+    "thumbnail": "/images/screenshots/bingpay.webp",
+    "screenshots": [
+      "",
+      ""
+    ],
+    "tags": ["Mobile", "Productivity", "Personal Project"]
   }
 ]

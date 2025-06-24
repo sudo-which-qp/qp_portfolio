@@ -17,15 +17,11 @@ function ProjectPage() {
     }, []);
     return (
         <>
-
             <Flex direction="column"
                   justifyContent="center"
                   alignItems="center">
-                <Text>
-                    Personal Projects
-                </Text>
                 <Text px={{  base: 20, md: 0}} textAlign="center" fontSize="sm" fontStyle="italic">
-                    This is still an experimental website and not all my projects are listed here.
+                    This list will be updated soon
                 </Text>
 
                 <Box width="100%" paddingRight={{ base: 0, md: 16 }} paddingLeft={{ base: 0, md: 16 }} alignItems="center">
