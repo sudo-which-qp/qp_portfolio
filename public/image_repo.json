@@ -1,134 +1,94 @@
 [
     {
         "id": 1,
-        "image": "s1.jpg"
+        "image": "s1.avif"
     },
     {
         "id": 2,
-        "image": "s2.jpg"
+        "image": "s2.avif"
     },
     {
         "id": 3,
-        "image": "s3.jpg"
+        "image": "s3.avif"
     },
     {
         "id": 4,
-        "image": "s4.jpg"
+        "image": "s4.avif"
     },
     {
         "id": 5,
-        "image": "s5.jpg"
+        "image": "s5.avif"
     },
     {
         "id": 6,
-        "image": "s6.jpg"
+        "image": "s6.avif"
     },
     {
         "id": 7,
-        "image": "s7.jpg"
+        "image": "s7.avif"
     },
     {
         "id": 8,
-        "image": "s8.jpg"
+        "image": "s8.avif"
     },
     {
         "id": 9,
-        "image": "s9.jpg"
+        "image": "s9.avif"
     },
     {
         "id": 10,
-        "image": "s10.jpg"
+        "image": "s10.avif"
     },
     {
         "id": 11,
-        "image": "s11.jpg"
+        "image": "s11.avif"
     },
     {
         "id": 12,
-        "image": "s12.jpg"
+        "image": "s12.avif"
     },
     {
         "id": 13,
-        "image": "s13.jpg"
+        "image": "s13.avif"
     },
     {
         "id": 14,
-        "image": "s14.jpg"
+        "image": "s14.avif"
     },
     {
         "id": 15,
-        "image": "s15.jpg"
+        "image": "s15.avif"
     },
     {
         "id": 16,
-        "image": "s16.jpg"
+        "image": "s16.avif"
     },
     {
         "id": 17,
-        "image": "s17.jpg"
+        "image": "s17.avif"
     },
     {
         "id": 18,
-        "image": "s18.jpg"
+        "image": "s18.avif"
     },
     {
         "id": 19,
-        "image": "s19.jpg"
+        "image": "s19.avif"
     },
     {
         "id": 20,
-        "image": "s20.jpg"
+        "image": "s20.avif"
     },
     {
         "id": 21,
-        "image": "s21.jpg"
+        "image": "s21.avif"
     },
     {
         "id": 22,
-        "image": "s22.jpg"
+        "image": "s22.avif"
     },
     {
         "id": 23,
-        "image": "s23.jpg"
-    },
-    {
-        "id": 24,
-        "image": "s24.jpg"
-    },
-    {
-        "id": 25,
-        "image": "s25.jpg"
-    },
-    {
-        "id": 26,
-        "image": "s26.jpg"
-    },
-    {
-        "id": 27,
-        "image": "s27.jpg"
-    },
-    {
-        "id": 28,
-        "image": "s28.jpg"
-    },
-    {
-        "id": 29,
-        "image": "s29.jpg"
-    },
-    {
-        "id": 30,
-        "image": "s30.jpg"
-    },
-    {
-        "id": 31,
-        "image": "s31.jpg"
-    },
-    {
-        "id": 32,
-        "image": "s32.jpg"
-    },
-    {
-        "id": 33,
-        "image": "s33.jpg"
+        "image": "s23.avif"
     }
 ]
