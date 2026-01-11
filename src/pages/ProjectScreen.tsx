@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 import {ProjectDetails} from "@/data/models.ts";
 import ProjectTile from "@/components/custom/ProjectTile.tsx";
 
-function ProjectPage() {
+function ProjectScreen() {
     const [projectDetails, setProjectDetails] = useState<ProjectDetails[]>([])
     const timestamp = new Date().getTime();
     useEffect(() => {
@@ -37,4 +37,4 @@ function ProjectPage() {
     )
 }
 
-export default ProjectPage
+export default ProjectScreen

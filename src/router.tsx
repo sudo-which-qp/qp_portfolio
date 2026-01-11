@@ -1,11 +1,11 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomeScreen from "./pages/HomeScreen.tsx";
 import NotFound from "./pages/NotFound";
-import BlogPage from "./pages/BlogPage";
+import BlogScreen from "./pages/BlogScreen.tsx";
 import Layout from "./pages/Layout";
-import PaperPage from "./pages/PaperPage";
+import PaperScreen from "./pages/PaperScreen.tsx";
 import WorkInProgress from "@/components/custom/WorkInProgress.tsx";
-import ProjectPage from "@/pages/ProjectPage.tsx";
+import ProjectScreen from "@/pages/ProjectScreen.tsx";
 
 const isOnMaintenance = true;
 const router = createBrowserRouter([
@@ -16,19 +16,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <HomeScreen />,
       },
       {
         path: "projects",
-        element: <ProjectPage />,
+        element: <ProjectScreen />,
       },
       {
         path: "papers",
-        element: isOnMaintenance ? <WorkInProgress /> : <PaperPage /> ,
+        element: isOnMaintenance ? <WorkInProgress /> : <PaperScreen /> ,
       },
       {
         path: "blog",
-        element: isOnMaintenance ? <WorkInProgress /> : <BlogPage />,
+        element: isOnMaintenance ? <WorkInProgress /> : <BlogScreen />,
       },
     ],
   },

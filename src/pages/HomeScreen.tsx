@@ -1,7 +1,7 @@
 import AboutContent from "@/components/home_components/AboutContent";
 import MyGallery from "@/components/home_components/MyGallery";
 
-function HomePage() {
+function HomeScreen() {
   return (
     <>
       <AboutContent />
@@ -11,4 +11,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default HomeScreen;
