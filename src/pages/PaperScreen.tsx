@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-function PaperPage() {
+function PaperScreen() {
     return (
         <Box>
             <h1>Paper Page</h1>
@@ -8,4 +8,4 @@ function PaperPage() {
     );
 }
 
-export default PaperPage
+export default PaperScreen

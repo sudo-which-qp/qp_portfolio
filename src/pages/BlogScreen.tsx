@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-function BlogPage() {
+function BlogScreen() {
     return (
         <Box>
             <h1>Blog Page</h1>
@@ -8,4 +8,4 @@ function BlogPage() {
     );
 }
 
-export default BlogPage
+export default BlogScreen
