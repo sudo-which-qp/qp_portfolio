@@ -30,8 +30,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{REGISTRY}}/qp-porfolio:latest
-            ${{REGISTRY}}/qp-porfolio:${{ github.sha }}
+            ${{ secrets.REGISTRY }}/qp-porfolio:latest
+            ${{ secrets.REGISTRY }}/qp-porfolio:${{ github.sha }}
 
       - name: Trigger redeploy webhook
         if: success()
