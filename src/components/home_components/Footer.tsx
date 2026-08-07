@@ -21,10 +21,15 @@ function Footer() {
           Contact me:
         </Text>
 
-        {/* <Link _focus={{outline: 'none', boxShadow: 'none'}}
-                      href="mailto:hello@godsendjoseph.org" textStyle="lg" textAlign="center" mr={5}>
-                    hello@godsendjoseph.org
-                </Link> */}
+        <Link
+          _focus={{ outline: "none", boxShadow: "none" }}
+          href="mailto:hello@godsendjoseph.org"
+          textStyle="lg"
+          textAlign="center"
+          mr={5}
+        >
+          godsend.joseph@vusionlabs.org
+        </Link>
         <Link
           _focus={{ outline: "none", boxShadow: "none" }}
           href="mailto:godsendjoseph@gmail.com"

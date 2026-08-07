@@ -2,14 +2,13 @@ import {
   Avatar,
   Box,
   Flex,
-  Icon,
   IconButton,
   Link,
   Text,
   Menu,
   Portal,
 } from "@chakra-ui/react";
-import { LuArrowUpRight, LuMenu } from "react-icons/lu";
+import { LuMenu } from "react-icons/lu";
 import qpImage from "../../assets/qp.jpg";
 
 function NavBar() {
@@ -73,7 +72,7 @@ function NavBar() {
               <Portal>
                 <Menu.Positioner>
                   <Menu.Content>
-                    <Menu.Item value="new-txt">
+                    {/* <Menu.Item value="new-txt">
                       <Link
                         _focus={{ outline: "none", boxShadow: "none" }}
                         href="#"
@@ -82,7 +81,7 @@ function NavBar() {
                       >
                         Resume
                       </Link>
-                    </Menu.Item>
+                    </Menu.Item> */}
                     {/* <Menu.Item value="new-txt">
                       <Link
                         _focus={{ outline: "none", boxShadow: "none" }}
@@ -91,28 +90,28 @@ function NavBar() {
                         Projects
                       </Link>
                     </Menu.Item> */}
-                    <Menu.Item value="new-txt">
+                    {/* <Menu.Item value="new-txt">
                       <Link
                         _focus={{ outline: "none", boxShadow: "none" }}
                         href="/papers"
                       >
                         Papers
                       </Link>
-                    </Menu.Item>
+                    </Menu.Item> */}
                   </Menu.Content>
                 </Menu.Positioner>
               </Portal>
             </Menu.Root>
 
             {/* Row for Nav */}
-            <Flex
+            {/* <Flex
               display={{ base: "none", md: "flex" }}
               direction="row"
               align="center"
               gap="3"
               paddingRight="3"
-            >
-              <Link
+            > */}
+            {/* <Link
                 _focus={{ outline: "none", boxShadow: "none" }}
                 href="#"
                 download={true}
@@ -124,9 +123,9 @@ function NavBar() {
                     <LuArrowUpRight />
                   </Icon>
                 </Flex>
-              </Link>
+              </Link> */}
 
-              {/* <Link
+            {/* <Link
                 _focus={{ outline: "none", boxShadow: "none" }}
                 href="/projects"
               >
@@ -138,7 +137,7 @@ function NavBar() {
                 </Flex>
               </Link> */}
 
-              <Link
+            {/* <Link
                 _focus={{ outline: "none", boxShadow: "none" }}
                 href="/papers"
               >
@@ -148,17 +147,17 @@ function NavBar() {
                     <LuArrowUpRight />
                   </Icon>
                 </Flex>
-              </Link>
+              </Link> */}
 
-              {/*<Link href="/blog">*/}
-              {/*  <Flex direction="row" align="center" gap="0.2">*/}
-              {/*    <Text>Blog</Text>*/}
-              {/*    <Icon>*/}
-              {/*      <LuArrowUpRight />*/}
-              {/*    </Icon>*/}
-              {/*  </Flex>*/}
-              {/*</Link>*/}
-            </Flex>
+            {/*<Link href="/blog">*/}
+            {/*  <Flex direction="row" align="center" gap="0.2">*/}
+            {/*    <Text>Blog</Text>*/}
+            {/*    <Icon>*/}
+            {/*      <LuArrowUpRight />*/}
+            {/*    </Icon>*/}
+            {/*  </Flex>*/}
+            {/*</Link>*/}
+            {/* </Flex> */}
             {/* End Row for Nav */}
           </Flex>
         </Box>
