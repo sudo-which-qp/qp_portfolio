@@ -83,14 +83,14 @@ function NavBar() {
                         Resume
                       </Link>
                     </Menu.Item>
-                    <Menu.Item value="new-txt">
+                    {/* <Menu.Item value="new-txt">
                       <Link
                         _focus={{ outline: "none", boxShadow: "none" }}
                         href="/projects"
                       >
                         Projects
                       </Link>
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <Menu.Item value="new-txt">
                       <Link
                         _focus={{ outline: "none", boxShadow: "none" }}
@@ -114,7 +114,7 @@ function NavBar() {
             >
               <Link
                 _focus={{ outline: "none", boxShadow: "none" }}
-                href="/files/Godsend_J_CV.pdf"
+                href="#"
                 download={true}
                 target="_blank"
               >
@@ -126,7 +126,7 @@ function NavBar() {
                 </Flex>
               </Link>
 
-              <Link
+              {/* <Link
                 _focus={{ outline: "none", boxShadow: "none" }}
                 href="/projects"
               >
@@ -136,7 +136,7 @@ function NavBar() {
                     <LuArrowUpRight />
                   </Icon>
                 </Flex>
-              </Link>
+              </Link> */}
 
               <Link
                 _focus={{ outline: "none", boxShadow: "none" }}
