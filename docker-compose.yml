@@ -1,0 +1,26 @@
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: qp_portfolio
+    ports:
+      - "1010:1010"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./react-router.config.ts:/app/react-router.config.ts
+      - ./vite.config.ts:/app/vite.config.ts
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./tsconfig.app.json:/app/tsconfig.app.json
+      - .react-router:/app/.react-router
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    stdin_open: true
+    tty: true
+    networks:
+      - react-dev-network
+networks:
+  react-dev-network:
+    driver: bridge

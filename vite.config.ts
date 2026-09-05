@@ -1,25 +1,22 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { tanstackRouter } from '@tanstack/router-plugin/vite'
-import tsconfigPaths from "vite-tsconfig-paths"
+import { defineConfig } from "vite";
+import { reactCompilerPreset } from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
+import { reactRouter } from "@react-router/dev/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    tanstackRouter({
-      target: 'react',
-      autoCodeSplitting: true,
+    reactRouter(),
+    tsconfigPaths(),
+    babel({
+      presets: [reactCompilerPreset()],
     }),
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']],
-      },
-    }),
-    tsconfigPaths()
   ],
-  server: {
-    headers: {
-      'Cache-Control': 'no-store',
-    },
+  build: {
+    chunkSizeWarningLimit: 1000,
   },
-})
+  server: {
+    host: "0.0.0.0",
+    port: 1010,
+  },
+});

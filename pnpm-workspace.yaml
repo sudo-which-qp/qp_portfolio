@@ -1,0 +1,13 @@
+supportedArchitectures:
+  os:
+    - current
+  cpu:
+    - current
+peerDependencyRules:
+  allowAny:
+    - typescript
+    - eslint
+    - babel-plugin-react-compiler
+allowBuilds:
+  "@swc/core": true
+  esbuild: true

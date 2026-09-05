@@ -1,0 +1,28 @@
+FROM node:24.11-alpine
+
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package.json ./
+
+# Clean lock file
+# RUN pnpm clean --lockfile
+
+# Install dependencies
+RUN pnpm install --ignore-scripts
+
+# Force download of all optional platform binaries at build time
+RUN pnpm vite --version
+
+# Copy source code
+COPY . .
+
+# Expose Vite dev server port
+EXPOSE 1010
+
+# Start development server with host binding
+CMD ["pnpm", "dev", "--host", "0.0.0.0"]
