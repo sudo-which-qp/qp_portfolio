@@ -2,15 +2,16 @@
   "name": "qp_portfolio",
   "productName": "Godsend Joseph",
   "description": "Portfolio of Godsend Joseph",
-  "main": "dist/index.html",
   "private": true,
   "version": "0.0.5",
   "author": "Vusion Labs",
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
     "build": "react-router build",
-    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -20,17 +21,17 @@
     "@react-router/node": "^8.3.1",
     "@tanstack/react-query": "^5.96.0",
     "axios": "1.19.0",
+    "isbot": "^5",
     "next-themes": "^0.4.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-hook-form": "^7.72.0",
     "react-icons": "^5.6.0",
     "react-router": "8.3.0",
-    "zustand": "^5.0.12",
-    "isbot": "^5"
+    "zustand": "^5.0.12"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
+    "@biomejs/biome": "^2.5.13",
     "@rolldown/plugin-babel": "^0.2.3",
     "@types/node": "^26.2.0",
     "@types/react": "^19.2.14",
@@ -38,13 +39,9 @@
     "@vitejs/plugin-react": "^6.0.1",
     "@vitejs/plugin-react-swc": "^4.3.0",
     "babel-plugin-react-compiler": "^1.0.0",
-    "eslint": "^10.1.0",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
     "tsx": "^4.21.0",
     "typescript": "~7.0.2",
-    "typescript-eslint": "^8.58.0",
     "vite": "8.2.1",
     "vite-tsconfig-paths": "^6.1.1"
   }

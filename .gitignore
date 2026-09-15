@@ -13,6 +13,8 @@ dist-ssr
 *.local
 pnpm-lock.yaml
 build
+.react-router/*
+.tanstack/*
 
 # Editor directories and files
 .vscode/*

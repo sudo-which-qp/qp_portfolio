@@ -6,7 +6,6 @@ supportedArchitectures:
 peerDependencyRules:
   allowAny:
     - typescript
-    - eslint
     - babel-plugin-react-compiler
 allowBuilds:
   "@swc/core": true
