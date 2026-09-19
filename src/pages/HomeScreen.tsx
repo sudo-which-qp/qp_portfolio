@@ -1,21 +1,17 @@
 import AboutContent from "@/components/home_components/AboutContent";
 import MyGallery from "@/components/home_components/MyGallery";
+import { pageMeta } from "@/utils/seo";
 import type { MetaFunction } from "react-router";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Godsend Joseph — Full Stack Developer" },
-    {
-      name: "description",
-      content:
-        "Godsend Joseph is a Full Stack Developer building cross-platform apps and Vusion Labs, a product company.",
-    },
-    { property: "og:title", content: "Godsend Joseph — Full Stack Developer" },
-    { property: "og:description", content: "Full Stack Developer building cross-platform apps and Vusion Labs." },
-    { property: "og:image", content: "https://yourdomain.com/og-image.jpg" },
-    { property: "og:type", content: "website" },
-  ];
-};
+export const meta = () =>
+  pageMeta({
+    title: "Godsend Joseph",
+    description:
+      "Godsend Joseph is a Full Stack Developer building cross-platform apps and Vusion Labs, a product company.",
+    image: "https://godsendjoseph.dev/og-image.jpg",
+    url: "https://godsendjoseph.dev",
+    type: "website",
+  });
 
 function HomeScreen() {
   return (
