@@ -1,169 +1,52 @@
-import {
-  Avatar,
-  Box,
-  Flex,
-  IconButton,
-  Link,
-  Text,
-  Menu,
-  Portal,
-} from "@chakra-ui/react";
-import { LuMenu } from "react-icons/lu";
+import { Avatar, Flex, HStack, Link, Text } from "@chakra-ui/react";
+import { NavLink } from "react-router";
 import qpImage from "../../assets/qp.jpg";
 
+const navItems = [
+	{ label: "Home", to: "/", end: true },
+	{ label: "Blog", to: "/blog", end: false },
+	{ label: "Papers", to: "/papers", end: false },
+];
+
 function NavBar() {
-  // const {_, onToggle} = useDisclosure();
-  return (
-    <>
-      <Box
-        width="100%"
-        position="sticky"
-        display="flex"
-        justifyContent="center"
-        padding={4}
-        top="0"
-        zIndex="10"
-        bg={"whiteAlpha.100"}
-      >
-        {/* Border Body */}
-        <Box
-          padding={3}
-          borderWidth="1px"
-          borderRadius="30px"
-          borderColor="gray.300"
-          bg={"whiteAlpha.900"}
-          width="50%"
-        >
-          {/* Row for Header */}
-          <Flex
-            direction="row"
-            justifyContent="space-between"
-            maxWidth="1200px"
-            align="center"
-          >
-            {/* Row for Avatar */}
-            <Flex direction="row" align="center" gap="2">
-              <Link
-                _focus={{ outline: "none", boxShadow: "none" }}
-                href="/"
-                _hover={{ textDecoration: "none" }}
-              >
-                <Avatar.Root>
-                  <Avatar.Fallback name="Godsend Joseph" />
-                  <Avatar.Image src={qpImage} />
-                </Avatar.Root>
-                <Text fontWeight="semibold">godsend.</Text>
-              </Link>
-            </Flex>
+	return (
+		<Flex
+			as="header"
+			justifyContent="space-between"
+			alignItems="center"
+			py={{ base: 6, md: 10 }}
+		>
+			<Link asChild _hover={{ textDecoration: "none" }} outline="none">
+				<NavLink to="/">
+					<HStack gap={3}>
+						<Avatar.Root size="md">
+							<Avatar.Fallback name="Godsend Joseph" />
+							<Avatar.Image src={qpImage} />
+						</Avatar.Root>
+						<Text fontFamily="heading" fontSize="3xl">
+							godsend.
+						</Text>
+					</HStack>
+				</NavLink>
+			</Link>
 
-            <Menu.Root>
-              <Menu.Trigger asChild>
-                <IconButton
-                  aria-label="Menu"
-                  variant="ghost"
-                  _hover={{ bg: "transparent" }}
-                  _active={{ bg: "transparent" }}
-                  display={{ base: "flex", md: "none" }}
-                  // onClick={onToggle}
-                >
-                  <LuMenu size={24} color="gray.500" />
-                </IconButton>
-              </Menu.Trigger>
-              <Portal>
-                <Menu.Positioner>
-                  <Menu.Content>
-                    {/* <Menu.Item value="new-txt">
-                      <Link
-                        _focus={{ outline: "none", boxShadow: "none" }}
-                        href="#"
-                        download={true}
-                        target="_blank"
-                      >
-                        Resume
-                      </Link>
-                    </Menu.Item> */}
-                    {/* <Menu.Item value="new-txt">
-                      <Link
-                        _focus={{ outline: "none", boxShadow: "none" }}
-                        href="/projects"
-                      >
-                        Projects
-                      </Link>
-                    </Menu.Item> */}
-                    {/* <Menu.Item value="new-txt">
-                      <Link
-                        _focus={{ outline: "none", boxShadow: "none" }}
-                        href="/papers"
-                      >
-                        Papers
-                      </Link>
-                    </Menu.Item> */}
-                  </Menu.Content>
-                </Menu.Positioner>
-              </Portal>
-            </Menu.Root>
-
-            {/* Row for Nav */}
-            {/* <Flex
-              display={{ base: "none", md: "flex" }}
-              direction="row"
-              align="center"
-              gap="3"
-              paddingRight="3"
-            > */}
-            {/* <Link
-                _focus={{ outline: "none", boxShadow: "none" }}
-                href="#"
-                download={true}
-                target="_blank"
-              >
-                <Flex direction="row" align="center" gap="0.2">
-                  <Text>Resume</Text>
-                  <Icon>
-                    <LuArrowUpRight />
-                  </Icon>
-                </Flex>
-              </Link> */}
-
-            {/* <Link
-                _focus={{ outline: "none", boxShadow: "none" }}
-                href="/projects"
-              >
-                <Flex direction="row" align="center" gap="0.2">
-                  <Text>Projects</Text>
-                  <Icon>
-                    <LuArrowUpRight />
-                  </Icon>
-                </Flex>
-              </Link> */}
-
-            {/* <Link
-                _focus={{ outline: "none", boxShadow: "none" }}
-                href="/papers"
-              >
-                <Flex direction="row" align="center" gap="0.2">
-                  <Text>Papers</Text>
-                  <Icon>
-                    <LuArrowUpRight />
-                  </Icon>
-                </Flex>
-              </Link> */}
-
-            {/*<Link href="/blog">*/}
-            {/*  <Flex direction="row" align="center" gap="0.2">*/}
-            {/*    <Text>Blog</Text>*/}
-            {/*    <Icon>*/}
-            {/*      <LuArrowUpRight />*/}
-            {/*    </Icon>*/}
-            {/*  </Flex>*/}
-            {/*</Link>*/}
-            {/* </Flex> */}
-            {/* End Row for Nav */}
-          </Flex>
-        </Box>
-      </Box>
-    </>
-  );
+			<HStack as="nav" gap={{ base: 4, md: 6 }}>
+				{navItems.map((item) => (
+					<NavLink key={item.to} to={item.to} end={item.end}>
+						{({ isActive }) => (
+							<Text
+								color={isActive ? "ink" : "muted"}
+								_hover={{ color: "ink" }}
+								transition="color 0.2s"
+							>
+								{item.label}
+							</Text>
+						)}
+					</NavLink>
+				))}
+			</HStack>
+		</Flex>
+	);
 }
 
 export default NavBar;

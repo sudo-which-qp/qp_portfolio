@@ -1,105 +1,53 @@
-import { useEffect, useState } from "react";
-import {
-  Box,
-  Flex,
-  Grid,
-  Image,
-  Link,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Grid, Image } from "@chakra-ui/react";
+import { useMemo } from "react";
+import { useJson } from "@/utils/useJson";
 
 interface GalleryImage {
-  id: number;
-  image: string;
+	id: number;
+	image: string;
 }
 
+const GALLERY_COUNT = 6;
+
 function MyGallery() {
-  const [images, setImages] = useState<GalleryImage[]>([]);
+	const allImages = useJson<GalleryImage>("/image_repo.json");
 
-  useEffect(() => {
-    fetch("/image_repo.json")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Fetched data:", data);
-        const randomImages = getRandomImages(data, 6);
-        setImages(randomImages);
-      })
-      .catch((error) => console.error(error));
-  }, []);
+	const images = useMemo(() => {
+		const shuffled = [...allImages];
 
-  const getRandomImages = (
-    imageArray: GalleryImage[],
-    count: number,
-  ): GalleryImage[] => {
-    const shuffled = [...imageArray];
+		// Fisher-Yates shuffle algorithm
+		for (let i = shuffled.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		}
 
-    // Fisher-Yates shuffle algorithm
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
+		return shuffled.slice(0, GALLERY_COUNT);
+	}, [allImages]);
 
-    return shuffled.slice(0, Math.min(count, shuffled.length));
-  };
-
-  const maxImages =
-    useBreakpointValue({ base: 2, md: images.length }) || images.length;
-  const displayedImages = images.slice(0, maxImages);
-
-  return (
-    <>
-      <Flex
-        width="100%"
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Box width="70%" paddingTop={10} alignItems="center">
-          <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={3}>
-            {displayedImages.map((image) => (
-              <Image
-                key={image.id}
-                src={`/images/gallery/${image.image}`}
-                alt={image.image}
-                fit="cover"
-                rounded="lg"
-                w="100%"
-                h="400px"
-              />
-            ))}
-          </Grid>
-        </Box>
-      </Flex>
-
-      <Flex
-        width="100%"
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-        mb={10}
-      >
-        <Box width="70%" paddingTop={10} alignItems="center">
-          <Text textStyle="2xl" textAlign="left">
-            My focus for the past one year have been researching on what needs
-            to be solved and built, and that's what have taken me to build
-            Vusion Labs.
-          </Text>
-
-          <Link href="https://vusionlabs.org/">
-            <Text
-              mt={5}
-              textStyle="4xl"
-              textAlign="left"
-              textDecoration="underline"
-            >
-              Take a look
-            </Text>
-          </Link>
-        </Box>
-      </Flex>
-    </>
-  );
+	return (
+		<Box mt={{ base: 10, md: 16 }}>
+			<Grid
+				templateColumns={{
+					base: "repeat(2, 1fr)",
+					md: "repeat(3, 1fr)",
+					lg: "repeat(6, 1fr)",
+				}}
+				gap={3}
+			>
+				{images.map((image) => (
+					<Image
+						key={image.id}
+						src={`/images/gallery/${image.image}`}
+						alt={image.image}
+						objectFit="cover"
+						rounded="lg"
+						w="100%"
+						aspectRatio={1}
+					/>
+				))}
+			</Grid>
+		</Box>
+	);
 }
 
 export default MyGallery;
