@@ -31,8 +31,8 @@ function AboutContent() {
 					toward{" "}
 					<Text as="span" color="accent">
 						BioTech
-					</Text>{" "}
-					— building at the intersection of software, hardware and health.
+					</Text>
+					, building at the intersection of software, hardware and health.
 				</Text>
 
 				<HStack mt={6} gap={2} wrap="wrap">
