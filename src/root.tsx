@@ -5,6 +5,16 @@ import favicon from "@/assets/qp.jpg";
 
 export const links: LinksFunction = () => [
   { rel: "icon", type: "image/jpeg", href: favicon },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap",
+  },
 ];
 
 export default function Root() {
